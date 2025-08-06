@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset ="UTF-8">
+        <title> Restaurant Menu </title>
+    </head>
+    <body>
+        <h1> Welcome to Our Restaurant! </h1>
+        <div id="menu"></div>
+
+        <script>
+            fetch("/api/menu/")
+            .then(res=>res.json())
+            .then(data =>{
+                document.getElementryById('menu').innerHtmlL=data.map(
+                item => '<div><b>${item.name}</b>: ${item.price} <br>%{item.description}<hr></div>').join('');
+                )
+             })
+             .catch(() =>{
+             document.getElementryById("menu").innerHtml = "couldn't load menu";
+             });
+        </script>
+    </body>
+</html>
