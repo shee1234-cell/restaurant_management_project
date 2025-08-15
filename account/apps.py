@@ -2,8 +2,13 @@
 <html lang = "en">
 <head>
 <meta charset = "UTF-8">
-<title> About Us </title>
+<title> Restaurant Home </title>
 <style>
+     *{
+        margin:0;
+        padding: 0;
+        box-sizing: border-box;
+    }
      body{
         font-family: Arial,sans-serif;
         text-align: center;
@@ -29,13 +34,29 @@
      a:hover{
         text-decoration: underline;
      }
+     nav{
+        background-color: yellow;
+        padding: 15px 20px;
+        text-align: center;
+     }
+     footer{
+        text-align:center;
+        background-color: yellow;
+        padding: 15px 20px;
+     }
 
 </style>
 </head>
 <body>
-     <h1> About Our Restaurant</h1>
-     <p> Welcome to Tadka Kitchen</p>
-     <img src = "/" alt = "Our Restaurant">
-     <p><a href = "/"> Back to Home</a></p>
+     <nav>
+     <a href = "/">Home</a>
+     <a href = "/about">About</a>
+     <a href = "/menu">Menu</a>
+     <a href = "/contact">Content</a>
+
+     <h1> Welcome to tadka kitchen</h1>
+     <p> Welcome to Taste Chatka - where every dish is made with love.</p>
+     <img src = "/" alt = "our restaurant">
+     <p><a href = "/"> Back to home<a></p>
 </body>
 </html>
