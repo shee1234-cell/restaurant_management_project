@@ -2,26 +2,8 @@
 <html><head>
     <title> Contact Us {{restaurant_name}} </title>
     <style>
-    body{
-        font-family: Arial, sans-serif:
-        text-align: center;
-        background-color: black;
-    }
-    h1{
-        color: red;
-        margin-top: 50px;
-    }
-    p{
-        font-size: 18px;
-        margin: 10px 0;
-    }
-    </style>
-    </head>
 <body>
-    <div class="contact-box">
-     <h1> Contact Us </h1>
-     <p> Email: support@demo.com </p>
-     <p> Phone: +91 000000000</p>
-     <p> Address: 123 Food street , jingu bingu talllalal</p>
+     <h1> Welcome to {{ restaurant_name }} </h1>
+     <p>We are happy to serve you delicious meals.</p>
 </body>
 </html>
