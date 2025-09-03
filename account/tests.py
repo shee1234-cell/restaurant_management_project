@@ -1,10 +1,45 @@
-from django.shortcuts import render
+<!templates/reservations.html>
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8">
+    <title> Reservations - My Restaurant</title>
 
-def menu_list(request):
-    menu_items = [
-        {"name": "Pizza", "price": "250"},
-        {"name": "Pasta", "price": "350"},
-        {"name": "Biriyani", "price": "550"},
-        {"name": "Coffee", "price": "150"},
-    ]
-    return render(request, "menu_list.html", {"menu_item": menu_items})
+<style>
+body{
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color:black;
+}
+h1{
+    color: red;
+    margin-top: 50px;
+}
+p{
+    font-size: 18px;
+    margin: 10px 0;
+}
+img.logo{
+    width: 200px;
+    margin: 20px auto;
+    display: block;
+}
+</style>
+</head>
+<body>
+    <div class = "contact-box">
+    <h1>Reservations</h1>
+    <p>Reservation system coming soon!</p>
+    <img src = "{% static 'image/logo.png'%}" alt = "logo" class ="logo">
+    <p> We Welcome to serve you our delicacy</p>
+    <h1> Contact Us </h1>
+    <p> Email: support@demo.com </p>
+    <p> Phone: +91 0000000000 </p>
+    <p> Address: 123 Food street, shanti nagar/p>
+    </div>
+
+    <footer style = "text-align: center; padding: 15px; margin-top: 30px; color: #666; font-size: 14px; border-top: 1px solid #ddd;">
+    <p>&copy; {{current_year}} My Restaurant. All rights reserved. </p>
+    </footer>
+</body>
+</html>
