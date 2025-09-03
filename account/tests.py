@@ -37,8 +37,5 @@ img.logo{
     <p> Address: 123 Food street, shanti nagar/p>
     </div>
 
-    <footer style = "text-align: center; padding: 15px; margin-top: 30px; color: #666; font-size: 14px; border-top: 1px solid #ddd;">
-    <p>&copy; {{current_year}} ((restaurant_name)). All rights reserved. </p>
-    </footer>
 </body>
 </html>
