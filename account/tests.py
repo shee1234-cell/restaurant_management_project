@@ -28,8 +28,7 @@ img.logo{
 </head>
 <body>
     <div class = "contact-box">
-    <h1>Reservations</h1>
-    <p>Reservation system coming soon!</p>
+    
     <img src = "{% static 'image/logo.png'%}" alt = "logo" class ="logo">
     <p> We Welcome to serve you our delicacy</p>
     <h1> Contact Us </h1>
