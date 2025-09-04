@@ -1,41 +1,15 @@
-<!templates/reservations.html>
-<!DOCTYPE html>
-<html lang = "en">
-<head>
-    <meta charset = "UTF-8">
-    <title> {{restaurant_name}} </title>
+from django.shortcuts import render
+from django.http import HttpResponse
 
-<style>
-body{
-    font-family: Arial, sans-serif;
-    text-align: center;
-    color:black;
-}
-h1{
-    color: red;
-    margin-top: 50px;
-}
-p{
-    font-size: 18px;
-    margin: 10px 0;
-}
-img.logo{
-    width: 200px;
-    margin: 20px auto;
-    display: block;
-}
-</style>
-</head>
-<body>
-    <div class = "contact-box">
-    
-    <img src = "{% static 'image/logo.png'%}" alt = "logo" class ="logo">
-    <p> We Welcome to serve you our delicacy</p>
-    <h1> Contact Us </h1>
-    <p> Email: support@demo.com </p>
-    <p> Phone: +91 0000000000 </p>
-    <p> Address: 123 Food street, shanti nagar/p>
-    </div>
-
-</body>
-</html>
+def menu_list(request):
+    try:
+        menu_items = [
+            {"name": "Pizza", "price": "250"},
+            {"name": "Pasta", "price": "200"},
+            {"name": "Biryani", "price": "550"},
+            {"name": "Coffee", "price": "150"}
+        ]
+        return render(request, "menu_list.html", {"menu_items": menu_items})
+    except Exception as e:
+        error_message: f"Oops! something went wrong: {str(e)}"
+        return HttpResponse(error_message, status=500)
